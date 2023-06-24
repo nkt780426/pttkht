@@ -3,7 +3,7 @@ package com.vietcombank.training.entity.ClassSubSystem;
 import java.util.Set;
 
 import com.vietcombank.training.entity.ActivitySubSystem.Diary;
-import com.vietcombank.training.entity.ProfileSubSystem.SchoolReport;
+import com.vietcombank.training.entity.ProfileSubSystem.StudentProfile;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,7 +29,7 @@ public class ClassProfile {
 	//tờ học bạ thuộc học bạ nào
 	@ManyToOne
 	@JoinColumn(name = "schooReportId")
-	private SchoolReport schoolReport;
+	private StudentProfile schoolReport;
 	
 	//thông tin tờ học bạ
 	//Thuộc lớp nào?

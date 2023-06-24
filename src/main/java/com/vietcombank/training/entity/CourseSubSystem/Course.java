@@ -1,12 +1,10 @@
 package com.vietcombank.training.entity.CourseSubSystem;
 
-import java.sql.Date;
 import java.util.Set;
 
 import com.vietcombank.training.entity.ClassSubSystem.Class;
 import com.vietcombank.training.entity.KDL.CourseStatus;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -17,8 +15,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 import lombok.Data;
 
 @Data
@@ -41,14 +37,6 @@ public class Course {
 	@ManyToOne
 	@JoinColumn(name="semesterId", nullable = false)
 	private Semester semester;
-	
-	@Temporal(TemporalType.DATE)
-	@Column(name = "startTime")
-	private Date startTime;
-	
-	@Temporal(TemporalType.DATE)
-	@Column(name = "endTime")
-	private Date endTime;
 
 	@Enumerated(EnumType.STRING)
 	private CourseStatus status;
@@ -56,7 +44,6 @@ public class Course {
 	//Các lớp học thuộc khóa học
 	@OneToMany(mappedBy = "course")
 	private Set<Class> classes;
-	
 	
 	//các đơn đăng ký khóa học của học sinh
 	@OneToMany(mappedBy = "course")

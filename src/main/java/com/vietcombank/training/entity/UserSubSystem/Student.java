@@ -3,7 +3,7 @@ package com.vietcombank.training.entity.UserSubSystem;
 import java.util.Set;
 
 import com.vietcombank.training.entity.CourseSubSystem.StudentRegisterCourse;
-import com.vietcombank.training.entity.ProfileSubSystem.SchoolReport;
+import com.vietcombank.training.entity.ProfileSubSystem.StudentProfile;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,5 +23,5 @@ public class Student extends User {
 	//1 học sinh có 1 học bạ, 1 học bạ chỉ chứa 1 học sinh
 	//xem những j học sinh đã học ở trường này bằng cách xem học bạ của học tại đây
 	@OneToOne(mappedBy = "student")
-	private SchoolReport schoolReport;
+	private StudentProfile schoolReport;
 }

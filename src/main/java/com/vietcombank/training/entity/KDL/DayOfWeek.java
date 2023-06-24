@@ -1,5 +1,5 @@
 package com.vietcombank.training.entity.KDL;
 
 public enum DayOfWeek {
-	MONDAY, TUESDAY
+	MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }

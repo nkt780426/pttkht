@@ -40,6 +40,10 @@ public class Class {
 	@OneToMany(mappedBy = "class1")
 	private Set<ClassProfile> profiles;
 	
+	//thời gian học
+	@OneToMany(mappedBy = "class1")
+	private Set<TimeTable> time;
+	
 	//các hoạt động thuộc lớp học
 	@OneToMany(mappedBy = "class1")
 	private Set<Activity> activities;
